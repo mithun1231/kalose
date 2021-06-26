@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/Sailec-Medium.eot');
+    src: local('Sailec Medium'), local('Sailec-Medium'),
+        url('../fonts/Sailec-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Sailec-Medium.woff2') format('woff2'),
+        url('../fonts/Sailec-Medium.woff') format('woff'),
+        url('../fonts/Sailec-Medium.ttf') format('truetype'),
+        url('../fonts/Sailec-Medium.svg#Sailec-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/Sailec-Bold.eot');
+    src: local('Sailec Bold'), local('Sailec-Bold'),
+        url('../fonts/Sailec-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Sailec-Bold.woff2') format('woff2'),
+        url('../fonts/Sailec-Bold.woff') format('woff'),
+        url('../fonts/Sailec-Bold.ttf') format('truetype'),
+        url('../fonts/Sailec-Bold.svg#Sailec-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/Sailec-Regular.eot');
+    src: local('Sailec Regular'), local('Sailec-Regular'),
+        url('../fonts/Sailec-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Sailec-Regular.woff2') format('woff2'),
+        url('../fonts/Sailec-Regular.woff') format('woff'),
+        url('../fonts/Sailec-Regular.ttf') format('truetype'),
+        url('../fonts/Sailec-Regular.svg#Sailec-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

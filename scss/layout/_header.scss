@@ -1,0 +1,221 @@
+
+header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 99;
+
+   .menu-row {
+      position: relative;
+      //  min-height: 100px;
+      padding: 20px 0;
+      @include flexbox();
+      @include justify-content(space-between);
+
+       .logo-wrap {
+           padding: 0 5px;
+           @include flexbox();
+           @include align-items(center);
+           @include transition(all 0.5s ease);
+
+           @include media-breakpoint-down(lg) {
+               padding: 0 5px 0 50px;
+           }
+
+           @include media-breakpoint-down(xs) {
+               padding: 0 5px 0 40px;
+               max-width: 140px;
+           }
+
+           @media (max-width: 355px) {
+               max-width: 130px;
+           }
+       }
+       
+       .menu-content {      
+           @include flexbox();
+           @include align-items(center);
+
+           .menu-wrap {
+
+               .menu-mobile-icon {
+                   display: none;
+
+                   @include media-breakpoint-down(lg) {
+                       position: absolute;
+                       left: 5px;
+                       top: 4px;
+                       bottom: 0;
+                       @include flexbox();
+                       @include align-items(center);
+                   }
+
+                   @include media-breakpoint-down(xs) {
+                       left: 0;
+                   }
+
+                   #toggle-icon {
+                       width: 22px;
+                       height: 15px;
+                       position: relative;
+                       @include rotate(0deg);
+                       @include transition(all .5s ease);
+                       cursor: pointer;
+
+                       span {
+                           display: block;
+                           position: absolute;
+                           height: 2px;
+                           width: 100%;
+                           background-color: $white;
+                           border-radius: 1px;
+                           opacity: 1;
+                           left: 0;
+                           @include rotate(0deg);
+                           @include transition(all .25s ease);
+
+                           &:nth-child(1) {
+                               top: 0px;
+                           }
+
+                           &:nth-child(2), &:nth-child(3) {
+                               top: 6px;
+                           }
+
+                           &:nth-child(4) {
+                               top: 12px;
+                           }
+                       }
+                       
+                       &.open {
+                           
+                           span {
+
+                               &:nth-child(1) {
+                                   top: 18px;
+                                   width: 0%;
+                                   left: 50%;
+                               }
+
+                               &:nth-child(2) {
+                                   @include rotate(45deg);
+                               }
+
+                               &:nth-child(3) {
+                                   @include rotate (-45deg);
+                               }
+
+                               &:nth-child(4) {
+                                   top: 18px;
+                                   width: 0%;
+                                   left: 50%;
+                               }
+                           }
+                       }
+                   }
+               }
+
+               .main-navigation {
+
+                   .nav {
+
+                       .main-menu-list {
+                           overflow: hidden;
+                           margin: 0;
+                           padding: 0;
+
+                           @include media-breakpoint-down(lg) {
+                               margin: 30px 0 0;
+                           }
+
+                           > li {			
+                               position: relative;
+                               float: left;
+
+                               @include media-breakpoint-down(lg) {
+                                   width: 100%;
+                                   margin: 0 0 20px;
+                               }
+                               
+                                 a {
+                                   font-size: 15px;
+                                   color: $blue;
+                                   text-transform: capitalize;
+                                   padding: 10px 20px;
+                                   z-index: 2;
+                                   position: relative;
+                               }
+                           }
+                       }
+                   }
+               }
+
+               @include media-breakpoint-down(lg) {
+
+                   .pushmenu {
+                       background: $secondarycolor;
+                       text-align: center;
+                       width: 250px;
+                       height: 100%;
+                       top: 0;
+                       z-index: 1000;
+                       position: fixed;
+                       overflow-x: auto;
+                       float: none !important;
+                       margin-top: 0 !important;
+                       @include transition(all 0.25s ease);
+                   }
+
+                   .pushmenu-left {
+                       left: -250px;
+                   }
+
+                   .pushmenu-open {
+                       left: 0;
+                   }
+               }
+           }
+
+           .button-wrap {
+
+               .link {
+
+                  &.account {
+                      padding-left: 30px;
+                      padding-right: 30px;
+                  }
+
+                  .num {
+                      font-size: 12px;
+                      line-height: 20px;
+                      background: $blue;
+                      width: 20px;
+                      height: 20px;
+                      border-radius: 50px;
+                      color: $white;
+                  }
+               }
+           }
+       }
+   }
+}
+
+.pushmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+  @include transition(all 0.25s ease);
+  
+  &.pushmenu-push-toright {
+     left: 250px;
+       @include transition(all 0.25s ease);
+       
+       header {
+
+           &.stick{
+               left: 250px;
+           }
+       }
+  }
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*, *::after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #a3a2af
+}
+
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #a3a2af
+}
+
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: #a3a2af
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: #a3a2af
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+	font-family: $sailec;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: $gray;
+	background-color: $white;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	margin: 0;
+	padding: 0; 
+	overflow: hidden
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+	vertical-align: middle;
+    border-style: none;
+}
+
+.container-fluid {
+	padding-right: 100px;
+	padding-left: 100px;
+
+	@include media-breakpoint-down(lg) {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1370px;
+	}
+}
+
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none !important;
+	}
+}
+
+.head-wrap {
+
+	@include media-breakpoint-down(lg) {
+
+		h2 {
+			text-align: left !important;
+		}
+
+		@include flexbox();
+		@include justify-content(space-between);
+		@include align-items(center);
+	}
+}

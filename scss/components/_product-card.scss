@@ -1,0 +1,51 @@
+
+.product-card {
+    
+    &:hover {
+
+        .view-details {
+            display: block !important;
+        }
+    }
+
+    .img-wrap {
+        position: relative;
+
+        .view-details {
+            width: 82px;
+            height: 82px;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 500;
+            color: $white;
+            background: $primarycolor;
+            display: none;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 20px;
+            position: absolute;
+            top: 25%;
+            right: 13%;
+        }
+    }
+
+    .text-wrap {
+        text-align: center;
+
+        h3 {
+            margin-top: 30px;
+        }
+
+        p {
+            
+            &.price {
+                font-size: 14px;
+                margin: 10px 0;
+            }
+
+            &.decp {
+                font-weight: 500;
+            }
+        }
+    }
+}

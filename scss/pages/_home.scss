@@ -1,0 +1,304 @@
+
+.banner-section {
+
+    .text-wrap {
+        background: $primarycolor;
+        width: 60%;
+
+        @media (max-width: 1450px) {
+            width: 70%;
+        }
+
+        @include media-breakpoint-down(xs) {
+            width: 75%;
+        }
+
+        .d-flex {
+
+            div {
+                max-width: 500px;
+                padding: 80px 0;
+
+                @include media-breakpoint-down(xs) {
+                    padding: 80px 15px;
+                }
+            }
+        }
+
+        h6 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #D2D2D2;
+            margin: 0 0 30px;
+        }
+
+        h1 {
+            font-weight: 700;
+            margin: 0 0 50px;
+
+            @include media-breakpoint-down(xs) {
+                margin: 0 0 30px;
+            }
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 26px;
+            color: #D2D2D2;
+            margin: 0 0 80px;
+
+            @include media-breakpoint-down(md) {
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+                margin: 0 0 50px;
+            }
+        }
+
+        .button {
+            white-space: nowrap;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-align: center;
+
+            &:not(:last-child) {
+                margin-right: 40px;
+
+                @include media-breakpoint-down(xs) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .img-wrap { 
+        width: 40%;
+        margin-left: -100px;
+        padding: 60px 0;
+
+        @media (max-width: 1450px) {
+            width: 30%;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-left: -50px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+    }
+}
+
+.skin-care-section {
+    padding: 100px 0;
+
+    @include media-breakpoint-down(lg) {
+        padding: 70px 0;
+    }
+}
+
+.our-client {
+    background-image: url(../images/05.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding: 150px 0;
+
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0;
+    }
+
+    h2 {
+        color: $white;
+        margin: 0 0 80px;
+
+        @include media-breakpoint-down(md) {
+            margin: 0 0 50px;
+        }
+    }
+
+    .watch-video {
+        font-size: 14px;
+        background: transparent;
+        border: none;
+        color: $white;
+
+        @include media-breakpoint-down(md) {
+            margin: 0 0 50px;
+        }
+
+        span {
+            border-bottom: 1px solid $white;
+        }
+    }
+
+    .content-wrap {
+        background: $white;
+        padding: 90px 60px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 60px 30px;
+        }
+        
+        h4 {
+            font-size: 50px;
+            line-height: 75px;
+            color: $primarycolor;
+            position: relative;
+            padding: 40px 50px;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 32px;
+                line-height: 44px;
+                color: #102421;
+                position: relative;
+                padding: 40px 0;
+            }
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                background-repeat: no-repeat;
+                width: 44px;
+                height: 37px;
+            }
+
+            &::before {
+                background-image: url(../images/top.svg);
+                left: 0;
+                top: 0;
+            }
+            
+            &::after {
+                background-image: url(../images/bottom.svg);
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        h6 {
+            font-size: 22px;
+            margin-top: 30px;
+            line-height: 36px;
+        }
+
+        h6, p {
+            padding-left: 50%;
+        }
+    }
+
+    @media (max-width: 1450px) {
+
+        .col-xl-7 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+
+        .col-xl-5 {
+            flex: 0 0 60%;
+            max-width: 60%;
+
+        }
+    }
+    
+    @include media-breakpoint-down(md) {
+        .col-xl-7 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .col-xl-5 {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+        }
+    }
+}
+
+.tablets {
+    padding: 100px 0;
+    
+    @include media-breakpoint-down(lg) {
+        padding: 70px 0;
+    }
+
+    .side-button {
+        color: white;
+        background: $primarycolor;
+    }
+
+    .slider-col {
+        margin-top: 80px;
+    }
+
+    .button-wrap {
+        position: absolute;
+        bottom: 220px;
+        left: 0;
+        z-index: 99;
+
+        .control-button {
+            background: transparent;
+            border: none;
+
+            &.next-button {
+                margin-right: -100px;
+
+                @include media-breakpoint-down(md) {
+                    margin-right: 50px;
+                }
+            }
+
+            &.prev-button {
+                margin-left: 50px;
+            }
+
+            &.swiper-button-disabled {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.swiper-container {
+    overflow: visible;
+}
+
+$slide: ".swiper-slide";
+.swiper-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+    &-active {
+        opacity: 1;
+        visibility: visible;
+  
+        @for $i from 1 through 3 {
+            & + #{$slide} {
+                opacity: 1;
+                visibility: visible;
+            }
+            $slide: "#{$slide} + .swiper-slide";
+        }
+    }
+}
+
+.benefits {
+    padding: 100px 0 50px;
+
+    @include media-breakpoint-down(lg) {
+        padding: 70px 0;
+    }
+
+    h2 {
+        margin: 0 0 80px;
+    }
+
+    h5 {
+        margin: 50px 0;
+    }
+}

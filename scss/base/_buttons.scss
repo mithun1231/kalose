@@ -1,0 +1,57 @@
+
+button {
+    cursor: pointer;
+    
+	&:focus {
+		outline: 0;
+	}
+}
+
+.button {
+    font-size: 14px;
+    border: none;
+    padding: 20px 32px;
+    border-radius: 40px;
+
+    @include media-breakpoint-down(lg) {
+        padding: 15px 22px;
+    }
+
+    img {
+        margin-right: 10px;
+    }
+
+
+    &.secondary-button {
+        background: $secondarycolor;
+        color: $primarycolor;
+    }
+
+    &.primary-button {
+        background: $primarycolor;
+        color: $white;
+    }
+
+    &.side-button {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        border: 1px solid #C4C4C4;
+        z-index: 99;
+
+        @include media-breakpoint-down(lg) {
+            position: relative;
+            top: inherit;
+            right: inherit;
+            white-space: nowrap;
+        }
+    }
+
+    &.link {
+        color: $white;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
